@@ -2,14 +2,14 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Ind Music Player"
-#define MyAppVersion "1.1"
+#define MyAppVersion "1.2"
 #define MyAppPublisher "Dmytro Kagirov"
 #define MyAppExeName "Ind Music Player.exe"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{4696D180-17EC-4F7B-BA1E-F37CB396F598}
+AppId={{675B606F-BC38-4418-8A84-51A015AA3846}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
@@ -17,7 +17,8 @@ AppPublisher={#MyAppPublisher}
 DefaultDirName={autopf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
-LicenseFile=C:\Users\Indra\source\CppProg\MusicPlayer\LICENSE.txt
+LicenseFile=C:\Users\Indra\source\CppProg\LICENSE.txt
+InfoAfterFile=C:\Users\Indra\source\CppProg\MusicPlayer\README.txt
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
 OutputBaseFilename=SetupIndMusic
@@ -30,6 +31,7 @@ WizardStyle=modern
 Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "czech"; MessagesFile: "compiler:Languages\Czech.isl"
 Name: "german"; MessagesFile: "compiler:Languages\German.isl"
+Name: "polish"; MessagesFile: "compiler:Languages\Polish.isl"
 Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl"
 Name: "slovak"; MessagesFile: "compiler:Languages\Slovak.isl"
 
@@ -40,6 +42,8 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Source: "C:\Users\Indra\source\CppProg\MusicPlayer\Debug\Ind Music Player.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\Indra\source\CppProg\MusicPlayer\Debug\bass.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\Indra\source\CppProg\MusicPlayer\Debug\Ind Music Player.exe.config"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Indra\source\CppProg\MusicPlayer\README.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Indra\source\CppProg\MusicPlayer\LICENSE.txt"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]

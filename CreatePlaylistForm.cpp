@@ -73,8 +73,7 @@ System::Void CreatePlaylistForm::buttonSave_Click(System::Object^ sender, System
 	memset(File, 0, MAX_PATH_LENGTH);
 	wchar_t FileTitle[MAX_PLAYLIST_NAME];
 	memset(FileTitle, 0, MAX_PLAYLIST_NAME);
-	wchar_t Filter[30] = 
-		L"Playlist file *.pll\0*.pll\0";
+	wchar_t Filter[30] = L"Playlist file *.pll\0*.pll\0";
 
 	for (int i = 0; i < this->textBoxName->Text->Length; i++)
 		File[i] = textBoxName->Text[i];

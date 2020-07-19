@@ -1,6 +1,5 @@
 ﻿  copy dll's to .exe file
-  C:\Users\Indra\source\CppProg\MusicPlayer\\lib\bass.dll
-  1 File(s) copied
+  0 File(s) copied
   CreatePlaylistForm.cpp
 C:\Users\Indra\source\CppProg\MusicPlayer\MyForm.h(103,1): warning C4305: 'argument': truncation from 'double' to 'float'
 C:\Users\Indra\source\CppProg\MusicPlayer\MyForm.h(120,1): warning C4305: 'argument': truncation from 'double' to 'float'
@@ -12,10 +11,10 @@ C:\Users\Indra\source\CppProg\MusicPlayer\MyForm.h(246,1): warning C4305: 'argum
 C:\Users\Indra\source\CppProg\MusicPlayer\MyForm.h(258,1): warning C4305: 'argument': truncation from 'double' to 'float'
 C:\Users\Indra\source\CppProg\MusicPlayer\MyForm.h(271,1): warning C4305: 'argument': truncation from 'double' to 'float'
 C:\Users\Indra\source\CppProg\MusicPlayer\CreatePlaylistForm.cpp(58,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\Indra\source\CppProg\MusicPlayer\CreatePlaylistForm.cpp(99,4): warning C4996: 'wcsncat': This function or variable may be unsafe. Consider using wcsncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\Indra\source\CppProg\MusicPlayer\CreatePlaylistForm.cpp(110,3): warning C4996: 'wcstombs': This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\Indra\source\CppProg\MusicPlayer\CreatePlaylistForm.cpp(112,3): warning C4996: 'wcstombs': This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\Indra\source\CppProg\MusicPlayer\CreatePlaylistForm.cpp(154,3): warning C4996: 'wcstombs': This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Indra\source\CppProg\MusicPlayer\CreatePlaylistForm.cpp(98,4): warning C4996: 'wcsncat': This function or variable may be unsafe. Consider using wcsncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Indra\source\CppProg\MusicPlayer\CreatePlaylistForm.cpp(109,3): warning C4996: 'wcstombs': This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Indra\source\CppProg\MusicPlayer\CreatePlaylistForm.cpp(111,3): warning C4996: 'wcstombs': This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Indra\source\CppProg\MusicPlayer\CreatePlaylistForm.cpp(153,3): warning C4996: 'wcstombs': This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   MyForm.cpp
 C:\Users\Indra\source\CppProg\MusicPlayer\MyForm.h(103,1): warning C4305: 'argument': truncation from 'double' to 'float'
 C:\Users\Indra\source\CppProg\MusicPlayer\MyForm.h(120,1): warning C4305: 'argument': truncation from 'double' to 'float'
@@ -27,8 +26,6 @@ C:\Users\Indra\source\CppProg\MusicPlayer\MyForm.h(246,1): warning C4305: 'argum
 C:\Users\Indra\source\CppProg\MusicPlayer\MyForm.h(258,1): warning C4305: 'argument': truncation from 'double' to 'float'
 C:\Users\Indra\source\CppProg\MusicPlayer\MyForm.h(271,1): warning C4305: 'argument': truncation from 'double' to 'float'
 C:\Users\Indra\source\CppProg\MusicPlayer\MyForm.cpp(120,49): warning C4144: '!=': relational expression as switch expression
-  PlayerMusic.cpp
-C:\Users\Indra\source\CppProg\MusicPlayer\PlayerMusic.cpp(299,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Generating Code...
   CreatePlaylistForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   MusicPlayer.vcxproj -> C:\Users\Indra\source\CppProg\MusicPlayer\Debug\Ind Music Player.exe

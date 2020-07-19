@@ -178,8 +178,7 @@ System::Void MyForm::buttonOpenPlaylist_Click(System::Object^ sender, System::Ev
 	memset(File, 0, MAX_PATH_LENGTH);
 	wchar_t FileTitle[MAX_PLAYLIST_NAME];
 	memset(FileTitle, 0, MAX_PLAYLIST_NAME);
-	wchar_t Filter[30] =
-		L"Playlist file *.pll\0*.pll\0";
+	wchar_t Filter[30] = L"Playlist file *.pll\0*.pll\0";
 
 	ofile.Flags = OFN_FILEMUSTEXIST | OFN_HIDEREADONLY | OFN_PATHMUSTEXIST;
 	ofile.lpstrTitle = L"Open the playlist";
@@ -227,43 +226,42 @@ System::Void MyForm::buttonOpenPlaylist_Click(System::Object^ sender, System::Ev
 }
 
 System::Void MyForm::buttonAddTrack_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (playlistOpen) {
-		wchar_t File[MAX_PATH_LENGTH];
-		memset(File, 0, MAX_PATH_LENGTH);
-		wchar_t FileTitle[MAX_PLAYLIST_NAME];
-		memset(FileTitle, 0, MAX_PLAYLIST_NAME);
-		wchar_t Filter[30] =
-			L"Mp3 Files\0*.mp3\0";
-
-		ofile.Flags = OFN_FILEMUSTEXIST | OFN_HIDEREADONLY | OFN_PATHMUSTEXIST;
-		ofile.lpstrTitle = L"Select files";
-		ofile.lStructSize = sizeof(OPENFILENAME);
-		ofile.hwndOwner = NULL;
-		ofile.lpstrFilter = Filter;
-		ofile.nFilterIndex = 1;
-		ofile.lpstrFile = File;
-		ofile.nMaxFile = sizeof(File);
-		ofile.lpstrFileTitle = FileTitle;
-		ofile.nMaxFileTitle = sizeof(FileTitle);
-		ofile.lpstrInitialDir = L"C:\\";
-
-		bool select = GetOpenFileName(&ofile);
-
-		if (select) {
-			char path[MAX_PATH_LENGTH]{};
-			wcstombs(path, ofile.lpstrFile, wcslen(ofile.lpstrFile) + 1);
-			PlayerMusic::playlist->AddTrack(PlayerMusic::Track::Create(path));
-
-			std::ofstream fout;
-			fout.open(PlayerMusic::playlist->GetPath(), std::ios_base::app);
-			fout << PlayerMusic::playlist->current->track->GetPath() << '\0';
-			fout.close();
-
-			SetRenderAndEvnets();
-		}
-	}
-	else
+	if (!playlistOpen) {
 		MessageBoxW(NULL, L"Playlist wasn't open.\nOpen it before adding new tracks.", L"Error: Playlist does not exist", MB_OK);
+		return;
+	}
+	wchar_t File[MAX_PATH_LENGTH];
+	memset(File, 0, MAX_PATH_LENGTH);
+	wchar_t FileTitle[MAX_PLAYLIST_NAME];
+	memset(FileTitle, 0, MAX_PLAYLIST_NAME);
+	wchar_t Filter[30] = L"Mp3 Files\0*.mp3\0";
+
+	ofile.Flags = OFN_FILEMUSTEXIST | OFN_HIDEREADONLY | OFN_PATHMUSTEXIST;
+	ofile.lpstrTitle = L"Select files";
+	ofile.lStructSize = sizeof(OPENFILENAME);
+	ofile.hwndOwner = NULL;
+	ofile.lpstrFilter = Filter;
+	ofile.nFilterIndex = 1;
+	ofile.lpstrFile = File;
+	ofile.nMaxFile = sizeof(File);
+	ofile.lpstrFileTitle = FileTitle;
+	ofile.nMaxFileTitle = sizeof(FileTitle);
+	ofile.lpstrInitialDir = L"C:\\";
+
+	bool select = GetOpenFileName(&ofile);
+
+	if (select) {
+		char path[MAX_PATH_LENGTH]{};
+		wcstombs(path, ofile.lpstrFile, wcslen(ofile.lpstrFile) + 1);
+		PlayerMusic::playlist->AddTrack(PlayerMusic::Track::Create(path));
+
+		std::ofstream fout;
+		fout.open(PlayerMusic::playlist->GetPath(), std::ios_base::app);
+		fout << PlayerMusic::playlist->current->track->GetPath() << '\0';
+		fout.close();
+
+		SetRenderAndEvnets();
+	}
 }
 
 System::Void MyForm::checkBoxRepeatTrack_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
