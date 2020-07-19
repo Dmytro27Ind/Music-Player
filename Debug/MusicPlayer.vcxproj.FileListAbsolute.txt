@@ -1,0 +1,7 @@
+C:\Users\Indra\source\CppProg\MusicPlayer\Debug\MusicPlayer.vcxprojAssemblyReference.cache
+C:\Users\Indra\source\CppProg\MusicPlayer\Debug\MusicPlayer.CreatePlaylistForm.resources
+C:\Users\Indra\source\CppProg\MusicPlayer\Debug\MusicPlayer.MyForm.resources
+C:\Users\Indra\source\CppProg\MusicPlayer\Debug\MusicPlayer.vcxproj.GenerateResource.cache
+C:\Users\Indra\source\CppProg\MusicPlayer\Debug\Ind Music Player.exe
+C:\Users\Indra\source\CppProg\MusicPlayer\Debug\Ind Music Player.pdb
+C:\Users\Indra\source\CppProg\MusicPlayer\Debug\Ind Music Player.exe.config
